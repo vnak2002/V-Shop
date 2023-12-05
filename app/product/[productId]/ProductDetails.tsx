@@ -83,7 +83,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
       return;
     }
     setCartProduct((prev) => {
-      return { ...prev, quantity: prev.quantity++ };
+      return { ...prev, quantity: prev.quantity + 1 };
     });
   }, [cartProduct]);
   const handleQtyDecrease = useCallback(() => {
@@ -92,7 +92,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     }
 
     setCartProduct((prev) => {
-      return { ...prev, quantity: prev.quantity-- };
+      return { ...prev, quantity: prev.quantity - 1 };
     });
   }, [cartProduct]);
   return (

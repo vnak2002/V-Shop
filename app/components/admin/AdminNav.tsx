@@ -1,6 +1,5 @@
 "use client";
 
-import { Container } from "@mui/material";
 import Link from "next/link";
 import AdminNavItem from "./AdminNavItem";
 import {
@@ -10,6 +9,7 @@ import {
   MdLibraryAdd,
 } from "react-icons/md";
 import { usePathname } from "next/navigation";
+import Container from "../Container";
 
 const AdminNav = () => {
   const pathname = usePathname();
