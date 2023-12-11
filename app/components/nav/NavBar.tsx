@@ -4,6 +4,8 @@ import { Redressed } from "next/font/google";
 import CartCount from "./CartCount";
 import UserMenu from "./UserMenu";
 import { getCurrentUser } from "@/actions/getCurrentUser";
+import Categories from "./Categories";
+import SearchBar from "./SearchBar";
 
 const redressed = Redressed({ subsets: ["latin"], weight: ["400"] });
 const NavBar = async () => {
@@ -20,7 +22,9 @@ const NavBar = async () => {
             >
               V-Shop
             </Link>
-            <div className="hidden md:block">Search</div>
+            <div className="hidden md:block">
+              <SearchBar />
+            </div>
             <div className="flex items-center gap-8 md:gap-12">
               <CartCount />
               <UserMenu currentUser={currentUser} />
@@ -28,6 +32,7 @@ const NavBar = async () => {
           </div>
         </Container>
       </div>
+      <Categories />
     </div>
   );
 };
