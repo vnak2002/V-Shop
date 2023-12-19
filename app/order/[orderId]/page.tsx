@@ -4,7 +4,7 @@ import getOrderById from "@/actions/getOrderById";
 import NullData from "@/app/components/NullData";
 
 interface IPrams {
-  productId?: string;
+  orderId?: string;
 }
 
 const Order = async ({ params }: { params: IPrams }) => {
